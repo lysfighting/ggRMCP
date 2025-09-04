@@ -29,6 +29,11 @@ type Config struct {
 	DescriptorPath string
 }
 
+var (
+	httpServer *http.Server
+	logger     *zap.Logger
+)
+
 // setupLogger creates a configured logger
 func setupLogger(config *Config) (*zap.Logger, error) {
 	var zapConfig zap.Config
@@ -74,7 +79,7 @@ func setupRouter(handler *server.Handler) *mux.Router {
 }
 
 // gracefulShutdown handles graceful shutdown of the HTTP server
-func gracefulShutdown(server *http.Server, logger *zap.Logger) {
+func GracefulShutdownMCP() {
 	// Wait for interrupt signal to gracefully shutdown the server
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
@@ -87,16 +92,16 @@ func gracefulShutdown(server *http.Server, logger *zap.Logger) {
 	defer cancel()
 
 	// Shutdown the server
-	if err := server.Shutdown(ctx); err != nil {
+	if err := httpServer.Shutdown(ctx); err != nil {
 		logger.Error("Server forced to shutdown", zap.Error(err))
 	}
 
 	logger.Info("Server exited")
 }
 
-func RegisterAndServeMCP(ctx context.Context, config *Config) {
+func RegisterAndServeMCP(ctx context.Context, config *Config) (err error) {
 	// Setup logger
-	logger, err := setupLogger(config)
+	logger, err = setupLogger(config)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to setup logger: %v\n", err)
 		os.Exit(1)
@@ -179,22 +184,19 @@ func RegisterAndServeMCP(ctx context.Context, config *Config) {
 	finalHandler := server.ChainMiddleware(middlewares...)(router)
 
 	// Create HTTP server
-	httpServer := &http.Server{
+	httpServer = &http.Server{
 		Addr:         fmt.Sprintf(":%d", config.HTTPPort),
 		Handler:      finalHandler,
 		ReadTimeout:  15 * time.Second,
 		WriteTimeout: 15 * time.Second,
 		IdleTimeout:  60 * time.Second,
 	}
+	return nil
+}
 
-	// Start server in a goroutine
-	go func() {
-		logger.Info("Starting HTTP server", zap.Int("port", config.HTTPPort))
-		if err := httpServer.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-			logger.Fatal("Failed to start HTTP server", zap.Error(err))
-		}
-	}()
-
-	// Wait for shutdown signal
-	gracefulShutdown(httpServer, logger)
+func Serve() {
+	logger.Info("Starting HTTP server", zap.Int("port", 50052))
+	if err := httpServer.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+		logger.Fatal("Failed to start HTTP server", zap.Error(err))
+	}
 }
