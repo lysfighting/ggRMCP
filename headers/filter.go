@@ -3,7 +3,7 @@ package headers
 import (
 	"strings"
 
-	"github.com/aalobaidi/ggRMCP/pkg/config"
+	"github.com/lysfighting/ggRMCP/config"
 )
 
 // Filter handles header filtering based on configuration

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/aalobaidi/ggRMCP/pkg/mcp"
-	"github.com/aalobaidi/ggRMCP/pkg/types"
+	"github.com/lysfighting/ggRMCP/mcp"
+	"github.com/lysfighting/ggRMCP/types"
 	"go.uber.org/zap"
 	"google.golang.org/protobuf/reflect/protoreflect"
 )

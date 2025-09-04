@@ -3,7 +3,7 @@ package tools
 import (
 	"testing"
 
-	"github.com/aalobaidi/ggRMCP/pkg/grpc"
+	"github.com/lysfighting/ggRMCP/grpc"
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/zap"
 )

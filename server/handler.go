@@ -8,12 +8,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aalobaidi/ggRMCP/pkg/config"
-	"github.com/aalobaidi/ggRMCP/pkg/grpc"
-	"github.com/aalobaidi/ggRMCP/pkg/headers"
-	"github.com/aalobaidi/ggRMCP/pkg/mcp"
-	"github.com/aalobaidi/ggRMCP/pkg/session"
-	"github.com/aalobaidi/ggRMCP/pkg/tools"
+	"github.com/lysfighting/ggRMCP/config"
+	"github.com/lysfighting/ggRMCP/grpc"
+	"github.com/lysfighting/ggRMCP/headers"
+	"github.com/lysfighting/ggRMCP/mcp"
+	"github.com/lysfighting/ggRMCP/session"
+	"github.com/lysfighting/ggRMCP/tools"
 	"go.uber.org/zap"
 )
 

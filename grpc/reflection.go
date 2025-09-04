@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/aalobaidi/ggRMCP/pkg/types"
+	"github.com/lysfighting/ggRMCP/types"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"

@@ -1,8 +1,8 @@
 # ggRMCP - gRPC to MCP Gateway
 
-[![CI](https://github.com/aalobaidi/ggRMCP/actions/workflows/ci.yml/badge.svg)](https://github.com/aalobaidi/ggRMCP/actions/workflows/ci.yml)
-[![Security](https://github.com/aalobaidi/ggRMCP/actions/workflows/security.yml/badge.svg)](https://github.com/aalobaidi/ggRMCP/actions/workflows/security.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/aalobaidi/ggRMCP)](https://goreportcard.com/report/github.com/aalobaidi/ggRMCP)
+[![CI](https://github.com/lysfighting/ggRMCP/actions/workflows/ci.yml/badge.svg)](https://github.com/lysfighting/ggRMCP/actions/workflows/ci.yml)
+[![Security](https://github.com/lysfighting/ggRMCP/actions/workflows/security.yml/badge.svg)](https://github.com/lysfighting/ggRMCP/actions/workflows/security.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/lysfighting/ggRMCP)](https://goreportcard.com/report/github.com/lysfighting/ggRMCP)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## 🎯 What is ggRMCP?
@@ -154,7 +154,7 @@ The fastest way to test ggRMCP is using the included hello-service example:
 
 #### 1. Clone and Build
 ```bash
-git clone https://github.com/aalobaidi/ggRMCP
+git clone https://github.com/lysfighting/ggRMCP
 cd ggRMCP
 go mod download
 go build -o build/grmcp ./cmd/grmcp
@@ -574,13 +574,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🔗 Related Projects
 
 This Go implementation is part of a family of gRPC-to-MCP gateways:
-- **[GrMCP (Java)](https://github.com/aalobaidi/grmcp)**: The original Java implementation
+- **[GrMCP (Java)](https://github.com/lysfighting/grmcp)**: The original Java implementation
 
 
 ## 📞 Support & Contact
 
-- **Issues**: Please use [GitHub Issues](https://github.com/aalobaidi/ggRMCP/issues) for bug reports and feature requests
-- **Discussions**: Use [GitHub Discussions](https://github.com/aalobaidi/ggRMCP/discussions) for questions and community chat
+- **Issues**: Please use [GitHub Issues](https://github.com/lysfighting/ggRMCP/issues) for bug reports and feature requests
+- **Discussions**: Use [GitHub Discussions](https://github.com/lysfighting/ggRMCP/discussions) for questions and community chat
 - **Security**: For security-related issues, please email ahmad.alobaidy@gmail.com
 
 ---

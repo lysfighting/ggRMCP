@@ -3,14 +3,14 @@ package tools
 import (
 	"testing"
 
-	"github.com/aalobaidi/ggRMCP/pkg/types"
+	"github.com/lysfighting/ggRMCP/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap"
 	"google.golang.org/protobuf/reflect/protoreflect"
 	"google.golang.org/protobuf/reflect/protoregistry"
 
-	_ "github.com/aalobaidi/ggRMCP/pkg/testproto"
+	_ "github.com/lysfighting/ggRMCP/testproto"
 )
 
 func TestBuildTool_RecursiveTypes(t *testing.T) {

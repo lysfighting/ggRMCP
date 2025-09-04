@@ -3,7 +3,7 @@ package headers
 import (
 	"testing"
 
-	"github.com/aalobaidi/ggRMCP/pkg/config"
+	"github.com/lysfighting/ggRMCP/config"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

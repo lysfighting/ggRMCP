@@ -1,4 +1,4 @@
-module github.com/aalobaidi/ggRMCP
+module github.com/lysfighting/ggRMCP
 
 go 1.23.0
 

@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/aalobaidi/ggRMCP/pkg/types"
+	"github.com/lysfighting/ggRMCP/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"go.uber.org/zap"

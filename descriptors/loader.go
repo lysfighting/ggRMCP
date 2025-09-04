@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/aalobaidi/ggRMCP/pkg/types"
+	"github.com/lysfighting/ggRMCP/types"
 	"go.uber.org/zap"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/reflect/protodesc"

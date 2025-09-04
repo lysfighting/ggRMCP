@@ -3,9 +3,9 @@ package tools
 import (
 	"testing"
 
-	"github.com/aalobaidi/ggRMCP/pkg/descriptors"
-	"github.com/aalobaidi/ggRMCP/pkg/grpc"
-	"github.com/aalobaidi/ggRMCP/pkg/types"
+	"github.com/lysfighting/ggRMCP/descriptors"
+	"github.com/lysfighting/ggRMCP/grpc"
+	"github.com/lysfighting/ggRMCP/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap"

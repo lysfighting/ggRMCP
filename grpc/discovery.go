@@ -6,9 +6,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/aalobaidi/ggRMCP/pkg/config"
-	"github.com/aalobaidi/ggRMCP/pkg/descriptors"
-	"github.com/aalobaidi/ggRMCP/pkg/types"
+	"github.com/lysfighting/ggRMCP/config"
+	"github.com/lysfighting/ggRMCP/descriptors"
+	"github.com/lysfighting/ggRMCP/types"
 	"go.uber.org/zap"
 )
 

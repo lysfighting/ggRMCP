@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/aalobaidi/ggRMCP/pkg/types"
+	"github.com/lysfighting/ggRMCP/types"
 	grpcLib "google.golang.org/grpc"
 )
 
